@@ -2,7 +2,7 @@
 	"name": "wepck",
 	"version": "1.0.0",
 	"private": true,
-	"main": "main.js",
+	"main": "electron.js",
 	"scripts": {
 		"prod": "webpack --mode production --config webpack.build.js && electron --noDevServer .",
 		"start": "webpack-dev-server --hot --host 0.0.0.0 --config=./webpack.dev.js --mode development",
@@ -27,6 +27,7 @@
 		"css-loader": "^3.5.1",
 		"electron": "^1.8.8",
 		"electron-packager": "^12.0.1",
+		"file-loader": "^6.0.0",
 		"html-webpack-plugin": "^3.2.0",
 		"node-sass": "^4.13.1",
 		"sass-loader": "^8.0.2",
