@@ -34,22 +34,9 @@ const mapDispatchToProps = (dispatch: Dispatch<ICommonAction>): IDispatchProps =
 
 const Nav: React.FunctionComponent<INavProps> = (props) => {
 	return (
-		<nav>
-			<table>
-				<tbody>
-					<tr>
-						<td>name:</td>
-						<td>{props.name}</td>
-					</tr>				
-					<tr>
-						<td>age:</td>
-						<td>{props.age}</td>
-					</tr>
-				</tbody>
-			</table>
-			<input type='text' value={props.name} onChange={props.onSetName}/>
-			<input type='number' value={props.age} onChange={props.onSetAge}/>
-		</nav>
+		<div>
+			<h2>Btw. His name is {props.name}, and he's {props.age} yers old.</h2>
+		</div>
 	)
 }
 

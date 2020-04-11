@@ -12,23 +12,14 @@ const Nav: React.FunctionComponent = () => {
 	const setName = (payload: string) => dispatch(commonActions.setName(payload))
 
 	return (
-		<nav>
-			<table>
-				<tbody>
-					<tr>
-						<td>name:</td>
-						<td>{name}</td>
-					</tr>				
-					<tr>
-						<td>age:</td>
-						<td>{age}</td>
-					</tr>
-				</tbody>
-			</table>
+		<div>
+			<label>name: </label>
 			<input type='text' value={name} onChange={(e) => setName(e.target.value)}/>
+			<br />
+			<label>age: </label>
 			<input type='number' value={age} onChange={(e) => setAge(Number(e.target.value))}/>
-		</nav>
-	)
+		</div>
+)
 }
 
 export default Nav

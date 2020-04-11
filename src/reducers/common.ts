@@ -6,8 +6,8 @@ export interface IState {
 }
 
 const initState: IState = {
-	age: 128307,
-	name: 'Marko'
+	age: 37,
+	name: 'Amadeus'
 }
 
 export const commonReducer = (state: IState = initState, action: ICommonAction): IState => {

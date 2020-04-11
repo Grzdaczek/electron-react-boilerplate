@@ -1,6 +1,6 @@
 # Build folder and files #
 ##########################
-builds/
+build/
 
 # Development folders and files #
 #################################
@@ -26,12 +26,6 @@ npm-debug.log*
 *.rar
 *.tar
 *.zip
-
-# Photoshop & Illustrator files #
-#################################
-*.ai
-*.eps
-*.psd
 
 # Windows & Mac file caches #
 #############################
