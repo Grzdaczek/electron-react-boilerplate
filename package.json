@@ -11,8 +11,8 @@
 		"prestart": "rimraf build/",
 		"prebuild": "rimraf build/",
 		"prepackage": "rimraf dist/",
-		"start": "webpack --config config/webpack.main.js --env.NODE_ENV=development && webpack-dev-server --config config/webpack.dev.js",
-		"build": "webpack --config config/webpack.main.js --env.NODE_ENV=production && webpack --config config/webpack.renderer.js",
+		"start": "webpack --config config/webpack.main.dev.js && webpack-dev-server --config config/webpack.renderer.dev.js",
+		"build": "webpack --config config/webpack.main.dist.js && webpack --config config/webpack.renderer.dist.js",
 		"package": "npm run build && electron-builder"
 	},
 	"build": {

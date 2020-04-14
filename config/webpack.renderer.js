@@ -1,11 +1,6 @@
 const path = require('path')
-const webpack = require('webpack')
-const HtmlPlugin = require('html-webpack-plugin')
-
-const NODE_ENV = 'production'
 
 module.exports = {
-	mode: NODE_ENV,
 	target: 'electron-renderer',
 	entry: {
 		renderer: './src/renderer.tsx',
@@ -52,12 +47,5 @@ module.exports = {
 			}
 		]
 	},
-	plugins: [
-		new HtmlPlugin({
-			template: 'src/index.html'
-		}),
-		new webpack.DefinePlugin({
-			'process.env.NODE_ENV': JSON.stringify(NODE_ENV),
-		}),
-	]
+	devtool: 'eval-source-map'
 }

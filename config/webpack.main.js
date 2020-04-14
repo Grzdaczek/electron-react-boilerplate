@@ -1,10 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 
-const DEV_SERVER_PORT = '2137'
-
-module.exports = env => ({
-	mode: env.NODE_ENV,
+module.exports = {
 	target: 'electron-main',
 	entry: {
 		main: './src/main.ts',
@@ -21,11 +18,5 @@ module.exports = env => ({
 				use: ['ts-loader']
 			},
 		]
-	},
-	plugins: [
-		new webpack.DefinePlugin({
-			'process.env.NODE_ENV': JSON.stringify(env.NODE_ENV),
-			'process.env.DEV_SERVER_PORT': JSON.stringify(DEV_SERVER_PORT),
-		}),
-	]
-})
+	}
+}
