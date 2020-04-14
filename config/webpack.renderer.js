@@ -9,7 +9,7 @@ module.exports = {
 	mode: NODE_ENV,
 	target: 'electron-renderer',
 	entry: {
-		renderer: './src/renderer.ts',
+		renderer: './src/renderer.tsx',
 	},
 	output: {
 		filename: '[name].js',

@@ -10,7 +10,7 @@ module.exports = {
 	mode: NODE_ENV,
 	target: 'electron-renderer',
 	entry: {
-		renderer: './src/renderer.ts',
+		renderer: './src/renderer.tsx',
 	},
 	resolve: {
 		extensions: [ '.tsx', '.ts', '.js' ]
@@ -33,6 +33,7 @@ module.exports = {
 			'process.env.DEV_SERVER_PORT': JSON.stringify(DEV_SERVER_PORT),
 		}),
 	],
+	devtool: 'eval-source-map',
 	devServer: {
 		contentBase: path.resolve('build'),
 		hot: true,
