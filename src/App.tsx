@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react'
 import Boo from './components/Boo'
 import Foo from './components/Foo'
-// import './styles/App.sass'
-// import img from 'src/assets/images/electron-logo.svg'
+import 'styles/App.sass'
+import img from 'assets/images/electron-logo.svg'
 
-const App: React.FunctionComponent = () =>  {
+const App = () =>  {
 	return (
 		<Fragment>
-			{/* <img src={img}/> */}
+			<img src={img}/>
 			<h1>Electron - React - Redux</h1>
 			<Boo />
 			<Foo />

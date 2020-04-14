@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const HtmlPlugin = require('html-webpack-plugin')
 
 const NODE_ENV = 'production'
-const DEV_SERVER_PORT = '2137'
 
 module.exports = {
 	mode: NODE_ENV,
@@ -16,15 +15,41 @@ module.exports = {
 		path: path.resolve('build')
 	},
 	resolve: {
-		extensions: [ '.tsx', '.ts', '.js' ]
+		extensions: [ '.tsx', '.ts', '.js' ],
+		alias: {
+			src: path.resolve('src/'),
+			assets: path.resolve('src/assets/'),
+			styles: path.resolve('src/styles/')
+		}
 	},
 	module: {
 		rules: [
 			{
+				test: /\.(jpe?g|png|gif|svg)$/,
+				exclude: /(node_modules)/,
+				use: {
+					loader: 'file-loader',
+					options: { name: 'assets/[name].[hash:8].[ext]' }
+				}
+			},
+			{
+				test: /\.(eot|ttf|woff|woff2)$/,
+				exclude: /(node_modules)/,
+				use: {
+					loader: 'file-loader',
+					options: { name: 'assets/[name].[hash:8].[ext]' }
+				}
+			},
+			{
+				test: /\.(scss|sass)$/,
+				exclude: /(node_modules)/,
+				use: ['style-loader', 'css-loader', 'sass-loader']
+			},
+			{
 				test: /\.(ts|tsx)?$/,
 				exclude: /(node_modules)/,
 				use: ['ts-loader']
-			},
+			}
 		]
 	},
 	plugins: [
