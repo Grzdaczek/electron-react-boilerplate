@@ -6,7 +6,6 @@
 		"forceConsistentCasingInFileNames": true,
 		"target": "es6",
 		"jsx": "react",
-		"isolatedModules": true,
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
